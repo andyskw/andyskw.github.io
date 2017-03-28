@@ -53,14 +53,65 @@
                     word: 'sell out',
                     description: 'to sell all the tickets'
                 },
+				{
+					word: 'attainment',
+					description: 'achievement'
+				},
+				{
+					word: 'combine',
+					description: 'to come together'
+				},
+				{
+					word: 'continue',
+					description: 'to maintain without interruption'
+				},
+				{
+					word: 'description',
+					description: 'a representation in words or pictures'
+				},
+				{
+					word: 'disperse',
+					description: 'to spread widely, to scatter'
+				},
+				{
+					word: 'entertainment',
+					description: 'a diverting performance or activity'
+				},
+				{
+					word: 'influence',
+					description: 'to alter or affect'
+				},
+				{
+					word: 'range',
+					description: 'the scope'
+				},
+				{
+					word: 'release',
+					description: 'to make available to the public; to give permission for performance'
+				},
+				{
+					word: 'representation',
+					description: 'exemplification; symbolization'
+				},
+				{
+					word: 'separately',
+					description: 'apart'
+				},
+				{
+					word: 'successive',
+					description: 'following in order'
+				},
+
             ];
-            var i = 0;
+            var i = -1;
             function comeon() {
                 var description= $('#description');
-                description.html(words[i].word);
+                if (i !== -1) {
+					description.html('<h2>'+words[i].word+'</h2>');
+				}
                 setTimeout(function () {
                     i = Math.floor(Math.random() * words.length);
-                    description.html(words[i].description);
+                    description.html('<h1>'+words[i].description+'</h1>');
                 }, 1000);
             }
 		</script>
