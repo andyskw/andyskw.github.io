@@ -1,1 +1,72 @@
-	hello world
+<html>
+	<head>
+		<script src="./lodash.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+		<script>
+
+            var words = [
+                {
+                    word: 'action',
+                    description: 'the series of events that form the plot of a story or play'
+                },
+                {
+                    word: 'approach',
+                    description: 'to go near; to move toward'
+                },
+                {
+                    word: 'audience',
+                    description: 'the spectators at a performance'
+                },
+                {
+                    word: 'creative',
+                    description: 'imaginative or artistic'
+                },
+                {
+                    word: 'dialogue',
+                    description: 'a conversation between two or more persons'
+                },
+                {
+                    word: 'element',
+                    description: 'a fundemantal or essential constituent'
+                },
+                {
+                    word: 'experience',
+                    description: 'an event or a series of events participated in or lived through'
+                },
+                {
+                    word: 'occur',
+                    description: 'to take place'
+                },
+                {
+                    word: 'perform',
+                    description: 'to act before an audience, to give a public presentation of'
+                },
+                {
+                    word: 'rehearse',
+                    description: 'to practice in preparation for a public performance; to direct in reahearsal'
+                },
+                {
+                    word: 'review',
+                    description: 'critical estimate of a work or performance; writing a criticism of a performance'
+                },
+                {
+                    word: 'sell out',
+                    description: 'to sell all the tickets'
+                },
+            ];
+            var i = 0;
+            function comeon() {
+                var description= $('#description');
+                description.html(words[i].word);
+                setTimeout(function () {
+                    i = Math.floor(Math.random() * words.length);
+                    description.html(words[i].description);
+                }, 1000);
+            }
+		</script>
+	</head>
+<body>
+	<div id="description"></div>
+	<input type="button" value="lalala" onclick="comeon();" style="width:150px;height:150px;padding:50px"></input>
+</body>
+</html>
