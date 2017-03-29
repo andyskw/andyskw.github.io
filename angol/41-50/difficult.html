@@ -1,0 +1,475 @@
+<html>
+	<head>
+		<script src="./lodash.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+		<script>
+
+            var words = [
+                /*{
+				 word: 'action',
+				 description: 'the series of events that form the plot of a story or play'
+				 },
+				 {
+				 word: 'approach',
+				 description: 'to go near; to move toward'
+				 },
+				 {
+				 word: 'audience',
+				 description: 'the spectators at a performance'
+				 },
+				 {
+				 word: 'creative',
+				 description: 'imaginative or artistic'
+				 },
+				 {
+				 word: 'dialogue',
+				 description: 'a conversation between two or more persons'
+				 },
+				 {
+				 word: 'element',
+				 description: 'a fundemantal or essential constituent'
+				 },
+				 {
+				 word: 'experience',
+				 description: 'an event or a series of events participated in or lived through'
+				 },
+				 {
+				 word: 'occur',
+				 description: 'to take place'
+				 },
+				 {
+				 word: 'perform',
+				 description: 'to act before an audience, to give a public presentation of'
+				 },
+				 {
+				 word: 'rehearse',
+				 description: 'to practice in preparation for a public performance; to direct in reahearsal'
+				 },
+				 {
+				 word: 'review',
+				 description: 'critical estimate of a work or performance; writing a criticism of a performance'
+				 },
+				 {
+				 word: 'sell out',
+				 description: 'to sell all the tickets'
+				 },
+				 {
+				 word: 'attainment',
+				 description: 'achievement'
+				 },
+				 {
+				 word: 'combine',
+				 description: 'to come together'
+				 },
+				 {
+				 word: 'continue',
+				 description: 'to maintain without interruption'
+				 },
+				 {
+				 word: 'description',
+				 description: 'a representation in words or pictures'
+				 },
+				 {
+				 word: 'disperse',
+				 description: 'to spread widely, to scatter'
+				 },
+				 {
+				 word: 'entertainment',
+				 description: 'a diverting performance or activity'
+				 },
+				 {
+				 word: 'influence',
+				 description: 'to alter or affect'
+				 },
+				 {
+				 word: 'range',
+				 description: 'the scope'
+				 },
+				 {
+				 word: 'release',
+				 description: 'to make available to the public; to give permission for performance'
+				 },
+				 {
+				 word: 'representation',
+				 description: 'exemplification; symbolization'
+				 },
+				 {
+				 word: 'separately',
+				 description: 'apart'
+				 },
+				 {
+				 word: 'successive',
+				 description: 'following in order'
+				 },
+				 {
+				 word: 'available',
+				 description: 'ready for use; willing to serve'
+				 },
+				 {
+				 word: 'broaden',
+				 description: 'to make wider'
+				 },
+				 {
+				 word: 'category',
+				 description: 'a division in a system of classification. a general class of ideas'
+				 },
+				 {
+				 word: 'disparate',
+				 description: 'fundemantally distinct or different'
+				 },
+				 {
+				 word: 'divide',
+				 description: 'to separate into parts'
+				 },
+				 {
+				 word: 'favor',
+				 description: 'to be partial to'
+				 },
+				 {
+				 word: 'instinct',
+				 description: 'an inborn pattern that is a powerful motivation'
+				 },
+				 {
+				 word: 'lively',
+				 description: 'full of energy'
+				 },
+				 {
+				 word: 'reason',
+				 description: 'the basis or motive for an action; an underlying fact or cause'
+				 },
+				 {
+				 word: 'relaxation',
+				 description: 'the act of relaxing or the state of being relaxed; refreshment of body or mind'
+				 },
+				 {
+				 word: 'taste',
+				 description: 'the ability to discern what is excellent or appropriate'
+				 },
+				 {
+				 word: 'urge',
+				 description: 'to advocate earnestly'
+				 },
+				 {
+				 word: 'consult',
+				 description: 'to seek advice or information of'
+				 },
+				 {
+				 word: 'control',
+				 description: 'to exercise authority or power over'
+				 },
+				 {
+				 word: 'convenient',
+				 description: "suited or favorable to one's purpose; easy to reach"
+				 },
+				 {
+				 word: 'detect',
+				 description: 'to discover or ascertain'
+				 },
+				 {
+				 word: 'factor',
+				 description: 'a contribution to an accomplishment, a result or a process'
+				 },
+				 {
+				 word: 'interaction',
+				 description: 'a mutual activity'
+				 },
+				 {
+				 word: 'limit',
+				 description: 'the point beyond which something cannot proceed'
+				 },
+				 {
+				 word: 'monitor',
+				 description: 'to keep track of'
+				 },
+				 {
+				 word: 'potential',
+				 description: 'capable of being but not yet in existence; possibl'
+				 },
+				 {
+				 word: 'sample',
+				 description: 'a portion, piece or segment that is representative of a whole'
+				 },
+				 {
+				 word: 'sense',
+				 description: 'a judgment; an intellectual interpretation'
+				 },
+				 {
+				 word: 'volunteer',
+				 description: 'to perform a service by choice or without being asked'
+				 },
+				 {
+				 word: 'alternative',
+				 description: 'allowing a choice; other'
+				 },
+				 {
+				 word: 'aspect',
+				 description: 'a feature element; an appearance'
+				 },
+				 {
+				 word: 'concern',
+				 description: 'anxiety; worry'
+				 },
+				 {
+				 word: 'emphasize',
+				 description: 'to stress'
+				 },
+				 {
+				 word: 'incur',
+				 description: 'to become subject to'
+				 },
+				 {
+				 word: 'personnel',
+				 description: 'a group of employees or workers'
+				 },
+				 {
+				 word: 'policy',
+				 description: 'a set of rules and regulations'
+				 },
+				 {
+				 word: 'portion',
+				 description: 'a section or quantity within a larger thing; a part of a whole'
+				 },
+				 {
+				 word: 'regardless',
+				 description: 'in spite of'
+				 },
+				 {
+				 word: 'reimburse',
+				 description: 'pay back money spent for a specific'
+				 },
+				 {
+				 word: 'suit',
+				 description: 'to be appropriate; to satisfy'
+				 },
+				 {
+				 word: 'treatment',
+				 description: 'care provided for a medical condition'
+				 },
+				 {
+				 word: 'aware',
+				 description: 'having knowledge'
+				 },
+				 {
+				 word: 'catch up',
+				 description: 'to bring up to date'
+				 },
+				 {
+				 word: 'distraction',
+				 description: 'the act of being turned away from the focus'
+				 },
+				 {
+				 word: 'encouragement',
+				 description: 'inspiration or support'
+				 },
+				 {
+				 word: 'evident',
+				 description: 'easily seen or understood; obvious'
+				 },
+				 {
+				 word: 'habit',
+				 description: 'a customary manner or practice'
+				 },
+				 {
+				 word: 'illuminate',
+				 description: 'to provide or brighten with light'
+				 },
+				 {
+				 word: 'irritate',
+				 description: 'to chafe or inflame, to bother'
+				 },
+				 {
+				 word: 'overview',
+				 description: 'a summary; a survey; a quick look'
+				 },
+				 {
+				 word: 'position',
+				 description: 'the place where something is; the way in which something is placed or arranged'
+				 },
+				 {
+				 word: 'regularly',
+				 description: 'occuring at fixed intervals'
+				 },
+				 {
+				 word: 'restore',
+				 description: 'to bring back to an original condition'
+				 },
+				 {
+				 word: 'accompany',
+				 description: 'to go with'
+				 },
+				 {
+				 word: 'admit',
+				 description: 'to permit to enter'
+				 },
+				 {
+				 word: 'authorize',
+				 description: 'to approve'
+				 },
+				 {
+				 word: 'designate',
+				 description: 'to indicate or specify'
+				 },
+				 {
+				 word: 'escort',
+				 description: 'a person accompanying another to guide or protect'
+				 },
+				 {
+				 word: 'identity',
+				 description: 'to ascertain the name or belongings of'
+				 },
+				 {
+				 word: 'mission',
+				 description: 'an inner calling to pursue an activity or perform a service'
+				 },
+				 {
+				 word: 'pertinent',
+				 description: 'having relevance to the matter at hand'
+				 },
+				 {
+				 word: 'procedure',
+				 description: 'a series of steps taken to accomplish an end'
+				 },
+				 {
+				 word: 'result',
+				 description: 'an outcome'
+				 },
+				 {
+				 word: 'statement',
+				 description: 'an accounting showing an amount due; a bill'
+				 },
+				 {
+				 word: 'surgery',
+				 description: 'a medical procedure that involves cutting into the body'
+				 },*/
+                {
+                    word: 'attainment',
+                    description: 'achievement'
+                },
+                {
+                    word: 'disperse',
+                    description: 'to spread widely, to scatter'
+                },
+                {
+                    word: 'entertainment',
+                    description: 'a diverting performance or activity'
+                },
+                {
+                    word: 'range',
+                    description: 'the scope'
+                },
+                {
+                    word: 'separately',
+                    description: 'apart'
+                },
+                {
+                    word: 'successive',
+                    description: 'following in order'
+                },
+                {
+                    word: 'occur',
+                    description: 'to take place; to come about'
+                },
+                {
+                    word: 'disparate',
+                    description: 'fundamentally distinct or different'
+                },
+                {
+                    word: 'urge',
+                    description: 'to advocate earnestly'
+                },
+                {
+                    word: 'constitute',
+                    description: 'to be the elements or parts of'
+                },
+                {
+                    word: 'decision',
+                    description: 'judgement or choice'
+                },
+                {
+                    word: 'disseminate',
+                    description: 'to scatter widely; to distribute'
+                },
+                {
+                    word: 'link',
+                    description: 'an association; a relationship'
+                },
+                {
+                    word: 'assess',
+                    description: 'to judge or evaluate'
+                },
+                {
+                    word: 'diagnose',
+                    description: 'to recognize a disease'
+                },
+                {
+                    word: 'effective',
+                    description: 'producing the desired results; in force'
+                },
+                {
+                    word: 'prevent',
+                    description: 'to keep from happening'
+                },
+                {
+                    word: 'refer',
+                    description: 'to direct for treatment'
+                },
+                {
+                    word: 'aspect',
+                    description: 'a feature element; an appearance'
+                },
+                {
+                    word: 'incur',
+                    description: 'to become subject to'
+                },
+                {
+                    word: 'designate',
+                    description: 'to indicate or specify'
+                },
+                {
+                    word: 'mission',
+                    description: 'an inner calling to pursue an activity or perform a service'
+                },
+                {
+                    word: 'pertinent',
+                    description: 'having relevance to the matter at hand'
+                },
+                {
+                    word: 'convenient',
+                    description: 'suited or favorable to ones purpose'
+                },
+                {
+                    word: 'detect',
+                    description: 'to discover or ascertain'
+                },
+                {
+                    word: 'factor',
+                    description: 'a contribution to an accomplishment, a result or a process'
+                },
+                {
+                    word: 'monitor',
+                    description: 'to keep track of'
+                },
+                {
+                    word: 'sense',
+                    description: 'a judgement, an intellectual interpretation'
+                },
+
+            ];
+            var i = -1;
+            function comeon() {
+                var description= $('#description');
+                if (i !== -1) {
+					description.html('<h2>'+words[i].word+'</h2>');
+				}
+                setTimeout(function () {
+                    i = Math.floor(Math.random() * words.length);
+                    description.html('<h1>'+words[i].description+'</h1>');
+                }, 1000);
+            }
+		</script>
+	</head>
+<body>
+	<div id="description"></div>
+	<input type="button" value="lalala" onclick="comeon();" style="width:150px;height:150px;padding:50px"></input>
+</body>
+</html>
